@@ -1,0 +1,11 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "basically_anything_14_beast_mod:items/bs_shovel_01"
+    },
+	"overrides":[
+		{"predicate":{"damaged":1, "damage": 0.85}, "model": "basically_anything_14_beast_mod:item/bs_shovel/bs_shovel_02"},
+		{"predicate":{"damaged":1, "damage": 0.9}, "model": "basically_anything_14_beast_mod:item/bs_shovel/bs_shovel_03"},
+		{"predicate":{"damaged":1, "damage": 0.95}, "model": "basically_anything_14_beast_mod:item/bs_shovel/bs_shovel_04"}
+	]
+}

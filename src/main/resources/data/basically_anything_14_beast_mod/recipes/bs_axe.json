@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" II",
+		" SI",
+		" S "
+	],
+	
+	"key":
+	{
+		"I": { "item": "basically_anything_14_beast_mod:blue_steel_ingot" },
+		"S": { "item": "basically_anything_14_beast_mod:bs_stick" }	
+	},
+	
+	"result": { "item": "basically_anything_14_beast_mod:bs_axe" }
+}

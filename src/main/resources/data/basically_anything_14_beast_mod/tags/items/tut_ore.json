@@ -1,0 +1,9 @@
+ {
+	"replace": false,
+	"values":
+	[
+		"basically_anything_14_beast_mod:tut_ore",
+		"basically_anything_14_beast_mod:tut_ore_nether",
+		"basically_anything_14_beast_mod:tut_ore_end"
+	]	
+}

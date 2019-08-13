@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"III",
+		"I I",
+		"   "
+	],
+	
+	"key":
+	{
+		"I": { "item": "basically_anything_14_beast_mod:tut_item" }
+	},
+	
+	"result": { "item": "basically_anything_14_beast_mod:tut_helmet" }
+}

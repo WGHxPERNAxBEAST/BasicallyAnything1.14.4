@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients": [{"item": "basically_anything_14_beast_mod:tut_item"}],
+	
+	"result": {
+		"item": "basically_anything_14_beast_mod:tut_nug",
+		"count": 9
+	}
+}

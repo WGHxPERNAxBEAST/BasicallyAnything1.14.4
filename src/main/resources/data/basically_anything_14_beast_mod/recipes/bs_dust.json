@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients": [
+		{
+			"item": "basically_anything_14_beast_mod:tut_dust"
+		},
+		{
+			"item": "basically_anything_14_beast_mod:carbon_dust"
+		}
+	],
+	
+	"result": {
+		"item": "basically_anything_14_beast_mod:bs_dust",
+		"count": 2
+	}
+}

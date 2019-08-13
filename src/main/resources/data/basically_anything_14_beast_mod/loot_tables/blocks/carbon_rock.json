@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:block",
+	"pools":[
+		{
+			"rolls": 1,
+			"entries":[
+				{
+					"type": "minecraft:item",
+					"name": "basically_anything_14_beast_mod:carbon_dust"
+				}
+			]
+		}
+	]
+}

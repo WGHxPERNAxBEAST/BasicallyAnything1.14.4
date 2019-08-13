@@ -1,0 +1,51 @@
+{
+	"item.basically_anything_14_beast_mod.tut_item": "Useless Ingot",
+	"item.basically_anything_14_beast_mod.tut_nug": "Useless Nugget",
+	"item.basically_anything_14_beast_mod.tut_dust": "Useless Dust",
+	"item.basically_anything_14_beast_mod.blue_steel_ingot": "Blue Steel Ingot",
+	"item.basically_anything_14_beast_mod.blue_steel_nug": "Blue Steel Nugget",
+	"item.basically_anything_14_beast_mod.bs_dust": "Blue Steel Dust",
+	
+	"item.basically_anything_14_beast_mod.bs_stick": "Blue Steel Rod",
+	"item.basically_anything_14_beast_mod.carbon_dust": "Rich Carbon Dust",
+	
+	"item.basically_anything_14_beast_mod.tut_axe": "Useless Axe",
+	"item.basically_anything_14_beast_mod.tut_pick": "Useless Pickaxe",
+	"item.basically_anything_14_beast_mod.tut_shovel": "Useless Shovel",
+	"item.basically_anything_14_beast_mod.tut_hoe": "Useless Hoe",
+	"item.basically_anything_14_beast_mod.tut_sword": "Useless Sword",
+	
+	"item.basically_anything_14_beast_mod.tut_helmet": "Useless Helmet",
+	"item.basically_anything_14_beast_mod.tut_chestplate": "Useless Chestplate",
+	"item.basically_anything_14_beast_mod.tut_leggings": "Useless Leggings",
+	"item.basically_anything_14_beast_mod.tut_boots": "Useless Boots",
+	
+	"item.basically_anything_14_beast_mod.bs_axe": "Blue Steel Axe",
+	"item.basically_anything_14_beast_mod.bs_pick": "Blue Steel Pickaxe",
+	"item.basically_anything_14_beast_mod.bs_shovel": "Blue Steel Shovel",
+	"item.basically_anything_14_beast_mod.bs_hoe": "Blue Steel Hoe",
+	"item.basically_anything_14_beast_mod.bs_sword": "Blue Steel Sword",
+	
+	"item.basically_anything_14_beast_mod.bs_helmet": "Blue Steel Helmet",
+	"item.basically_anything_14_beast_mod.bs_chestplate": "Blue Steel Chestplate",
+	"item.basically_anything_14_beast_mod.bs_leggings": "Blue Steel Leggings",
+	"item.basically_anything_14_beast_mod.bs_boots": "Blue Steel Boots",
+	
+	"item.basically_anything_14_beast_mod.tut_entity_egg": "Useless Mob Spawn Egg",
+	
+	"block.basically_anything_14_beast_mod.tut_block": "Useless Block",
+	"block.basically_anything_14_beast_mod.blue_steel_block": "Blue Steel Block",
+	
+	"block.basically_anything_14_beast_mod.carbon_rock": "Rich Carbonic Rock",
+	"block.basically_anything_14_beast_mod.tut_ore": "Useless Ore",
+	"block.basically_anything_14_beast_mod.tut_ore_nether": "Useless Nether Ore",
+	"block.basically_anything_14_beast_mod.tut_ore_end": "Useless End Ore",
+	
+	"entity.basically_anything_14_beast_mod.tut_entity": "Useless Mob",
+	
+	"itemGroup.ba_items": "Basically Any Items",
+	"itemGroup.ba_blocks": "Basically Any Blocks",
+	"itemGroup.ba_t_and_c": "Basically Any Tools or Combat Items",
+	"itemGroup.ba_misc": "Basically Anything Else"
+	
+}

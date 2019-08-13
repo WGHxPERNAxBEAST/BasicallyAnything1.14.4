@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:blasting",
+	
+	"ingredient": {"item": "basically_anything_14_beast_mod:bs_dust"},
+	
+	"result": "basically_anything_14_beast_mod:blue_steel_ingot",
+	
+	"experience": 0.75,
+	"cookingtime": 90
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"I I",
+		"III",
+		"III"
+	],
+	
+	"key":
+	{
+		"I": { "item": "basically_anything_14_beast_mod:blue_steel_ingot" }
+	},
+	
+	"result": { "item": "basically_anything_14_beast_mod:bs_chestplate" }
+}

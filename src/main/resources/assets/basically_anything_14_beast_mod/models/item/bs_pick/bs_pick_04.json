@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "basically_anything_14_beast_mod:items/bs_pick_04"
+    }
+}

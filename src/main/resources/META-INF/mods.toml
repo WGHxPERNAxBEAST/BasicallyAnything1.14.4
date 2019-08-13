@@ -1,0 +1,47 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[28,)" #mandatory
+
+#issueTrackerURL="http://my.issue.tracker/" #optional
+
+
+
+[[mods]] 
+
+modId="basically_anything_14_beast_mod" 
+
+version="0.1" 
+
+displayName="Basically Anything 1.14.4" 
+
+#updateJSONURL="http://myurl.me/" #optional
+
+#displayURL="http://example.com/" #optional
+
+#logoFile="examplemod.png" #optional
+
+credits="Me, cuz I am duh one dont weigh a ton, dont need a gun to get respect up on the streets."
+
+authors="WGHxPERNAxBEAST"
+
+description='''
+A fun mod that adds random things I find cool into the game.
+Basically Anything that I could think of, I added. 
+Hence the name.
+I hope you enjoy :)
+'''
+
+
+[[dependencies.basically_anything_14_beast_mod]]
+    modId="forge" #mandatory
+    mandatory=true
+    versionRange="[28,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.basically_anything_14_beast_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
