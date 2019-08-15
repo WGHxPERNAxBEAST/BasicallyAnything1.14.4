@@ -23,7 +23,7 @@ public class TutEntities {
 	}
 	
 	public static void registerEntityWorldSpawns() {
-		registerEntityWorldSpawn(TUT_ENTITY, Biomes.PLAINS, Biomes.BEACH, Biomes.MOUNTAINS);
+		registerEntityWorldSpawn(TUT_ENTITY, Biomes.PLAINS, Biomes.BEACH, Biomes.MOUNTAINS, BiomesList.tut_biome);
 	}
 	
 	public static Item registerEntitySpawnEgg(EntityType<?> type, int color1, int color2, ItemGroup itemGroup, String name) {
