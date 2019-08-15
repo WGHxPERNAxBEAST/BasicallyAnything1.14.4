@@ -8,4 +8,5 @@
     "west": "basically_anything_14_beast_mod:block/generator",
     "north": "basically_anything_14_beast_mod:block/generator_front",
     "south": "basically_anything_14_beast_mod:block/generator"
+	}
 }
