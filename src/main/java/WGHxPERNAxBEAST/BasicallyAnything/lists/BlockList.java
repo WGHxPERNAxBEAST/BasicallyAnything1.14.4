@@ -15,12 +15,12 @@ public class BlockList {
 	public static Block carbon_rock;
 	public static Block tut_ore, tut_ore_nether, tut_ore_end;
 	
-	@ObjectHolder("BasicallyAnything.generatorblock")
+	@ObjectHolder("main.generator")
     public static GeneratorBlock GENERATORBLOCK;
 
-    @ObjectHolder("BasicallyAnything.generatorblock")
+    @ObjectHolder("main.generator")
     public static TileEntityType<GeneratorBlockTile> GENERATORBLOCK_TILE;
 
-    @ObjectHolder("BasicallyAnything.generatorblock")
+    @ObjectHolder("main.generator")
     public static ContainerType<GeneratorBlockContainer> GENERATORBLOCK_CONTAINER;
 }
