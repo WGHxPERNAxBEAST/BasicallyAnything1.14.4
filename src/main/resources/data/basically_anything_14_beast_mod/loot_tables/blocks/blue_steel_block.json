@@ -8,6 +8,11 @@
 					"type": "minecraft:item",
 					"name": "basically_anything_14_beast_mod:blue_steel_block"
 				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:survives_explosion"
+		        }
 			]
 		}
 	]
