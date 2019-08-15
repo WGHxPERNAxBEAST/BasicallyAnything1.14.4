@@ -167,7 +167,7 @@ public class main {
 		
 		@SubscribeEvent
         public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
-            event.getRegistry().register(TileEntityType.Builder.create(GeneratorBlockTile::new, BlockList.GENERATORBLOCK).build(null).setRegistryName("generator"));
+            event.getRegistry().register(TileEntityType.Builder.create(GeneratorBlockTile::new, BlockList.GENERATORBLOCK).build(null).setRegistryName(location("generator")));
         }
 		
         @SubscribeEvent
@@ -175,7 +175,7 @@ public class main {
             event.getRegistry().register(IForgeContainerType.create((windowId, inv, data) -> {
                 BlockPos pos = data.readBlockPos();
                 return new GeneratorBlockContainer(windowId, main.proxy.getClientWorld(), pos, inv, main.proxy.getClientPlayer());
-            }).setRegistryName("generator"));
+            }).setRegistryName(location("generator")));
         }
         
 		@SubscribeEvent

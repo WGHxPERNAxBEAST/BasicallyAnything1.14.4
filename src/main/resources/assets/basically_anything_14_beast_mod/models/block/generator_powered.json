@@ -1,11 +1,11 @@
 {
     "parent": "block/cube",
     "textures": {
-    "particle": "basically_anything_14_beast_mod:block/blue_steel_block",
-    "down": "basically_anything_14_beast_mod:block/blue_steel_block",
-    "up": "basically_anything_14_beast_mod:block/blue_steel_block",
-    "east": "basically_anything_14_beast_mod:block/blue_steel_block",
-    "west": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "particle": "basically_anything_14_beast_mod:block/generator",
+    "down": "basically_anything_14_beast_mod:block/generator",
+    "up": "basically_anything_14_beast_mod:block/generator",
+    "east": "basically_anything_14_beast_mod:block/generator",
+    "west": "basically_anything_14_beast_mod:block/generator",
     "north": "basically_anything_14_beast_mod:block/generator_powered",
-    "south": "basically_anything_14_beast_mod:block/blue_steel_block"
+    "south": "basically_anything_14_beast_mod:block/generator"
 }

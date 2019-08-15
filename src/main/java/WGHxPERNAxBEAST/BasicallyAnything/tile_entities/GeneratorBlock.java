@@ -1,5 +1,6 @@
 package WGHxPERNAxBEAST.BasicallyAnything.tile_entities;
 
+import WGHxPERNAxBEAST.BasicallyAnything.main;
 import afu.org.checkerframework.checker.nullness.qual.Nullable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -29,7 +30,7 @@ public class GeneratorBlock extends Block {
                 .hardnessAndResistance(2.0f)
                 .lightValue(14)
         );
-        setRegistryName("generator");
+        setRegistryName(main.location("generator"));
     }
 
     @Override
