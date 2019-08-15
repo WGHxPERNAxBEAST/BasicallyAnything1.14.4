@@ -42,6 +42,8 @@ public class ItemList {
 	public static Item carbon_rock;
 	public static Item tut_ore, tut_ore_nether, tut_ore_end;
 	
+	public static Item generator;
+	
 	public static Item tut_entity_egg;
 	
 }

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north,powered=false": { "model": "basically_anything_14_beast_mod:block/generator" },
+    "facing=south,powered=false": { "model": "basically_anything_14_beast_mod:block/generator", "y": 180 },
+    "facing=west,powered=false": { "model": "basically_anything_14_beast_mod:block/generator", "y": 270 },
+    "facing=east,powered=false": { "model": "basically_anything_14_beast_mod:block/generator", "y": 90 },
+    "facing=up,powered=false": { "model": "basically_anything_14_beast_mod:block/generator", "x": -90 },
+    "facing=down,powered=false": { "model": "basically_anything_14_beast_mod:block/generator", "x": 90 },
+    "facing=north,powered=true": { "model": "basically_anything_14_beast_mod:block/generator_powered" },
+    "facing=south,powered=true": { "model": "basically_anything_14_beast_mod:block/generator_powered", "y": 180 },
+    "facing=west,powered=true": { "model": "basically_anything_14_beast_mod:block/generator_powered", "y": 270 },
+    "facing=east,powered=true": { "model": "basically_anything_14_beast_mod:block/generator_powered", "y": 90 },
+    "facing=up,powered=true": { "model": "basically_anything_14_beast_mod:block/generator_powered", "x": -90 },
+    "facing=down,powered=true": { "model": "basically_anything_14_beast_mod:block/generator_powered", "x": 90 }
+  }
+}

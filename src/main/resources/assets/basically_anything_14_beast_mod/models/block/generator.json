@@ -1,0 +1,11 @@
+{
+    "parent": "block/cube",
+    "textures": {
+    "particle": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "down": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "up": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "east": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "west": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "north": "basically_anything_14_beast_mod:block/generator_front",
+    "south": "basically_anything_14_beast_mod:block/blue_steel_block"
+}

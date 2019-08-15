@@ -14,6 +14,12 @@ import WGHxPERNAxBEAST.BasicallyAnything.lists.BlockList;
 import WGHxPERNAxBEAST.BasicallyAnything.lists.ItemList;
 import WGHxPERNAxBEAST.BasicallyAnything.lists.ToolMatList;
 import WGHxPERNAxBEAST.BasicallyAnything.lists.TutEntities;
+import WGHxPERNAxBEAST.BasicallyAnything.proxies.ClientProxy;
+import WGHxPERNAxBEAST.BasicallyAnything.proxies.IProxy;
+import WGHxPERNAxBEAST.BasicallyAnything.proxies.ServerProxy;
+import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlock;
+import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlockContainer;
+import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlockTile;
 import WGHxPERNAxBEAST.BasicallyAnything.world.OreGeneration;
 import WGHxPERNAxBEAST.BasicallyAnything.world.TutWorldType;
 import WGHxPERNAxBEAST.BasicallyAnything.world.biomes.TutBiome;
@@ -22,6 +28,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.HoeItem;
@@ -31,12 +38,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -51,6 +62,8 @@ public class main {
 	public static main instance;
 	public static final String modid = "basically_anything_14_beast_mod";
 	public static final Logger logger = LogManager.getLogger(modid);
+	
+	public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
 	
 	public static final ItemGroup baItemGroup = new GroupClass("ba_items", ItemList.tut_item);
 	public static final ItemGroup baBlockGroup = new GroupClass("ba_blocks", ItemList.tut_block);
@@ -77,6 +90,7 @@ public class main {
 	//pre-init
 	private void setup(final FMLCommonSetupEvent event) {
 		OreGeneration.setupOreGeneration();
+		proxy.init();
 		logger.info("Setup method registered.");
 	}
 	
@@ -128,7 +142,8 @@ public class main {
 				ItemList.carbon_rock = new BlockItem(BlockList.carbon_rock, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.carbon_rock.getRegistryName()),
 				ItemList.tut_ore = new BlockItem(BlockList.tut_ore, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore.getRegistryName()),
 				ItemList.tut_ore_nether = new BlockItem(BlockList.tut_ore_nether, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore_nether.getRegistryName()),
-				ItemList.tut_ore_end = new BlockItem(BlockList.tut_ore_end, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore_end.getRegistryName())
+				ItemList.tut_ore_end = new BlockItem(BlockList.tut_ore_end, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore_end.getRegistryName()),
+				ItemList.generator = new BlockItem(BlockList.GENERATORBLOCK, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.GENERATORBLOCK.getRegistryName())
 			);
 			
 			TutEntities.registerEntitySpawnEggs(event);
@@ -144,11 +159,25 @@ public class main {
 				BlockList.carbon_rock = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("carbon_rock")),
 				BlockList.tut_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore")),
 				BlockList.tut_ore_nether = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_nether")),
-				BlockList.tut_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_end"))
+				BlockList.tut_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_end")),
+				BlockList.GENERATORBLOCK = new GeneratorBlock()
 			);
 			logger.info("Blocks registered.");
 		}
 		
+		@SubscribeEvent
+        public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
+            event.getRegistry().register(TileEntityType.Builder.create(GeneratorBlockTile::new, BlockList.GENERATORBLOCK).build(null).setRegistryName("generator"));
+        }
+		
+        @SubscribeEvent
+        public static void onContainerRegistry(final RegistryEvent.Register<ContainerType<?>> event) {
+            event.getRegistry().register(IForgeContainerType.create((windowId, inv, data) -> {
+                BlockPos pos = data.readBlockPos();
+                return new GeneratorBlockContainer(windowId, main.proxy.getClientWorld(), pos, inv, main.proxy.getClientPlayer());
+            }).setRegistryName("generator"));
+        }
+        
 		@SubscribeEvent
 		public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
 			event.getRegistry().registerAll(

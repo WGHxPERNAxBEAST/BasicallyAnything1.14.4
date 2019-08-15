@@ -41,6 +41,8 @@
 	"block.basically_anything_14_beast_mod.tut_ore_nether": "Useless Nether Ore",
 	"block.basically_anything_14_beast_mod.tut_ore_end": "Useless End Ore",
 	
+	"block.basically_anything_14_beast_mod.generator": "Carbon Dust Power Generator",
+	
 	"entity.basically_anything_14_beast_mod.tut_entity": "Useless Mob",
 	
 	"itemGroup.ba_items": "Basically Any Items",
