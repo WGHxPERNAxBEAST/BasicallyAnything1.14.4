@@ -164,7 +164,7 @@ public class main {
 				BlockList.tut_ore_nether = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_nether")),
 				BlockList.tut_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_end")),
 				BlockList.GENERATORBLOCK = new GeneratorBlock(),
-				BlockList.field_maker = new FieldMakerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(3.0F, 4.0F).lightValue(0).sound(SoundType.METAL)).setRegistryName(location("field_maker"))
+				BlockList.field_maker = (FieldMakerBlock) new FieldMakerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(3.0F, 4.0F).lightValue(0).sound(SoundType.METAL)).setRegistryName(location("field_maker"))
 			);
 			logger.info("Blocks registered.");
 		}

@@ -1,5 +1,6 @@
 package WGHxPERNAxBEAST.BasicallyAnything.lists;
 
+import WGHxPERNAxBEAST.BasicallyAnything.blocks.FieldMakerBlock;
 import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlock;
 import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlockContainer;
 import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlockTile;
@@ -15,7 +16,8 @@ public class BlockList {
 	public static Block carbon_rock;
 	public static Block tut_ore, tut_ore_nether, tut_ore_end;
 	
-	public static Block field_maker;
+	@ObjectHolder("basically_anything_14_beast_mod:field_maker")
+    public static FieldMakerBlock field_maker;
 	
 	@ObjectHolder("basically_anything_14_beast_mod:generator")
     public static GeneratorBlock GENERATORBLOCK;
