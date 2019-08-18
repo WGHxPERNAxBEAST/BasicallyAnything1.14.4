@@ -15,6 +15,8 @@ public class BlockList {
 	public static Block carbon_rock;
 	public static Block tut_ore, tut_ore_nether, tut_ore_end;
 	
+	public static Block field_maker;
+	
 	@ObjectHolder("basically_anything_14_beast_mod:generator")
     public static GeneratorBlock GENERATORBLOCK;
 

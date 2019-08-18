@@ -7,6 +7,7 @@
 	"item.basically_anything_14_beast_mod.bs_dust": "Blue Steel Dust",
 	
 	"item.basically_anything_14_beast_mod.bs_stick": "Blue Steel Rod",
+	"item.basically_anything_14_beast_mod.bs_gear": "Blue Steel Cog",
 	"item.basically_anything_14_beast_mod.carbon_dust": "Rich Carbon Dust",
 	
 	"item.basically_anything_14_beast_mod.tut_axe": "Useless Axe",
@@ -42,6 +43,7 @@
 	"block.basically_anything_14_beast_mod.tut_ore_end": "Useless End Ore",
 	
 	"block.basically_anything_14_beast_mod.generator": "Carbon Dust Power Generator",
+	"block.basically_anything_14_beast_mod.field_maker": "Anti-Mob Field Generator",
 	
 	"entity.basically_anything_14_beast_mod.tut_entity": "Useless Mob",
 	

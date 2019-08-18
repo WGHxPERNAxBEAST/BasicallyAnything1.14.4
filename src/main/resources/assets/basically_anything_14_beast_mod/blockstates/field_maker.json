@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "basically_anything_14_beast_mod:block/field_maker" },
+    "facing=south": { "model": "basically_anything_14_beast_mod:block/field_maker", "y": 180 },
+    "facing=west": { "model": "basically_anything_14_beast_mod:block/field_maker", "y": 270 },
+    "facing=east": { "model": "basically_anything_14_beast_mod:block/field_maker", "y": 90 },
+    "facing=up": { "model": "basically_anything_14_beast_mod:block/field_maker", "x": -90 },
+    "facing=down": { "model": "basically_anything_14_beast_mod:block/field_maker", "x": 90 }
+  }
+}

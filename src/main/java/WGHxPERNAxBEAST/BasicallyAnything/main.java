@@ -3,6 +3,7 @@ package WGHxPERNAxBEAST.BasicallyAnything;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import WGHxPERNAxBEAST.BasicallyAnything.blocks.FieldMakerBlock;
 import WGHxPERNAxBEAST.BasicallyAnything.client.render.TutRenderRegistry;
 import WGHxPERNAxBEAST.BasicallyAnything.config.Config;
 import WGHxPERNAxBEAST.BasicallyAnything.items.ItemCustomAxe;
@@ -113,6 +114,7 @@ public class main {
 				ItemList.bs_dust = new Item(new Item.Properties().group(baItemGroup)).setRegistryName(location("bs_dust")),
 				
 				ItemList.bs_stick = new Item(new Item.Properties().group(baItemGroup)).setRegistryName(location("bs_stick")),
+				ItemList.bs_gear = new Item(new Item.Properties().group(baItemGroup)).setRegistryName(location("bs_gear")),
 				ItemList.carbon_dust = new ItemFuel(Items.COAL.getBurnTime(new ItemStack(Items.COAL)), new Item.Properties().group(baItemGroup)).setRegistryName(location("carbon_dust")),
 				
 				ItemList.tut_axe = new ItemCustomAxe(ToolMatList.tut_mat, -1.0F, 6.0F, new Item.Properties().group(baToolAndCombatGroup)).setRegistryName(location("tut_axe")),
@@ -143,7 +145,8 @@ public class main {
 				ItemList.tut_ore = new BlockItem(BlockList.tut_ore, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore.getRegistryName()),
 				ItemList.tut_ore_nether = new BlockItem(BlockList.tut_ore_nether, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore_nether.getRegistryName()),
 				ItemList.tut_ore_end = new BlockItem(BlockList.tut_ore_end, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.tut_ore_end.getRegistryName()),
-				ItemList.generator = new BlockItem(BlockList.GENERATORBLOCK, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.GENERATORBLOCK.getRegistryName())
+				ItemList.generator = new BlockItem(BlockList.GENERATORBLOCK, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.GENERATORBLOCK.getRegistryName()),
+				ItemList.field_maker = new BlockItem(BlockList.field_maker, new Item.Properties().group(baBlockGroup)).setRegistryName(BlockList.field_maker.getRegistryName())
 			);
 			
 			TutEntities.registerEntitySpawnEggs(event);
@@ -160,7 +163,8 @@ public class main {
 				BlockList.tut_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore")),
 				BlockList.tut_ore_nether = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_nether")),
 				BlockList.tut_ore_end = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0F, 3.0F).lightValue(0).sound(SoundType.STONE)).setRegistryName(location("tut_ore_end")),
-				BlockList.GENERATORBLOCK = new GeneratorBlock()
+				BlockList.GENERATORBLOCK = new GeneratorBlock(),
+				BlockList.field_maker = new FieldMakerBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(3.0F, 4.0F).lightValue(0).sound(SoundType.METAL)).setRegistryName(location("field_maker"))
 			);
 			logger.info("Blocks registered.");
 		}

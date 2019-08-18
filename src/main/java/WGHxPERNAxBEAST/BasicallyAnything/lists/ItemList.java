@@ -12,6 +12,7 @@ public class ItemList {
 	public static Item bs_dust;
 	
 	public static Item bs_stick;
+	public static Item bs_gear;
 	public static Item carbon_dust;
 	
 	public static Item tut_axe;
@@ -43,6 +44,7 @@ public class ItemList {
 	public static Item tut_ore, tut_ore_nether, tut_ore_end;
 	
 	public static Item generator;
+	public static Item field_maker;
 	
 	public static Item tut_entity_egg;
 	

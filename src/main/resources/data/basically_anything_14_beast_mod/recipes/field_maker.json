@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"BGB",
+		"BDB",
+		"BBB"
+	],
+	
+	"key":
+	{
+		"B": { "item": "basically_anything_14_beast_mod:blue_steel_block" },
+		"G": { "item": "basically_anything_14_beast_mod:bs_gear" },
+		"D": { "item": "minecraft:diamond" }
+	},
+	
+	"result": { "item": "basically_anything_14_beast_mod:field_maker" }
+}

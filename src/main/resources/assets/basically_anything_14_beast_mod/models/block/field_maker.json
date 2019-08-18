@@ -3,10 +3,10 @@
     "textures": {
     "particle": "basically_anything_14_beast_mod:block/blue_steel_block",
     "down": "basically_anything_14_beast_mod:block/blue_steel_block",
-    "up": "basically_anything_14_beast_mod:block/blue_steel_block",
+    "up": "basically_anything_14_beast_mod:block/field_maker_top",
     "east": "basically_anything_14_beast_mod:block/blue_steel_block",
     "west": "basically_anything_14_beast_mod:block/blue_steel_block",
-    "north": "basically_anything_14_beast_mod:block/generator_front",
+    "north": "basically_anything_14_beast_mod:block/blue_steel_block",
     "south": "basically_anything_14_beast_mod:block/blue_steel_block"
 	}
 }
