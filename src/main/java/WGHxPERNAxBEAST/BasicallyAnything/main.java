@@ -21,6 +21,8 @@ import WGHxPERNAxBEAST.BasicallyAnything.proxies.ServerProxy;
 import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlock;
 import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlockContainer;
 import WGHxPERNAxBEAST.BasicallyAnything.tile_entities.GeneratorBlockTile;
+import WGHxPERNAxBEAST.BasicallyAnything.utils.ModCaps;
+import WGHxPERNAxBEAST.BasicallyAnything.utils.ServerEventHandler;
 import WGHxPERNAxBEAST.BasicallyAnything.world.OreGeneration;
 import WGHxPERNAxBEAST.BasicallyAnything.world.TutWorldType;
 import WGHxPERNAxBEAST.BasicallyAnything.world.biomes.TutBiome;
@@ -65,6 +67,7 @@ public class main {
 	public static final Logger logger = LogManager.getLogger(modid);
 	
 	public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
+	public ServerEventHandler eventHandlerServer;
 	
 	public static final ItemGroup baItemGroup = new GroupClass("ba_items", ItemList.tut_item);
 	public static final ItemGroup baBlockGroup = new GroupClass("ba_blocks", ItemList.tut_block);
@@ -90,6 +93,8 @@ public class main {
 	
 	//pre-init
 	private void setup(final FMLCommonSetupEvent event) {
+		MinecraftForge.EVENT_BUS.register((this.eventHandlerServer = new ServerEventHandler()));
+		ModCaps.registerModCaps();
 		OreGeneration.setupOreGeneration();
 		proxy.init();
 		logger.info("Setup method registered.");
