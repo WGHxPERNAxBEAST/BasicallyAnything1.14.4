@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	
+	"ingredients": [
+		{
+			"item": "beastly_customization:low_dust"
+		},
+		{
+			"tag": "beastly_customization:coal_dust"
+		}
+	],
+	
+	"result": {
+		"item": "beastly_customization:tut_dust",
+		"count": 2
+	}
+}
